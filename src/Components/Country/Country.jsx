@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./country.css";
-const Country = ({ country }) => {
+const Country = ({ country, handleVisitedCountries }) => {
   const [visited, setVisited] = useState(false);
   const handleVisited = () => {
     //    Basic system
@@ -14,6 +14,7 @@ const Country = ({ country }) => {
 
     // 3rd system
     setVisited(!visited);
+    handleVisitedCountries(country);
   };
   //   console.log(country.area.area);
   return (
@@ -23,7 +24,7 @@ const Country = ({ country }) => {
       <p>Population: {country.population.population}</p>
       <p>Capital: {country.capital.capital} </p>
       <p>Official Name: {country.name.official} </p>
-      <h3 className="text-[#9980ff]">
+      <h3 className="text-[#7d5ef7]">
         Area: {country.area.area}{" "}
         {country.area.area > 300000 ? "Big country" : "Small country"}
       </h3>
