@@ -13,6 +13,7 @@ const Country = ({ country }) => {
         Area:{country.area.area}{" "}
         {country.area.area > 300000 ? "Big country" : "Small country"}
       </h3>
+      <button className="btn btn-primary mt-5">Not Visited</button>
     </div>
   );
 };
